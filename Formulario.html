@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario com Soma</title>
+    <style ></style>
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
+<body>
+    <h1>Formulario com Soma</h1>
+
+    <form  action="">
+        <select id="tipoEmpresa">
+            <option value="0">Qual seu tipo de empresa</option>
+            <option value="49">MEI (R$49,00)</option>
+            <option value="99">LTDA (R$99,00)</option>
+        </select>
+        
+        <select id="quantFunc">
+            <option value="0">Quantidade de Funcionários</option>
+            <option value="49">1-3 (R$49,00)</option>
+            <option value="99">4-8 (R$99,00)</option>
+        </select>   
+
+        <input id="btn" type="button" value="Calcular" onclick="FazerCalculo()">
+        <div id="ResultadoSoma"></div>
+    </form>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

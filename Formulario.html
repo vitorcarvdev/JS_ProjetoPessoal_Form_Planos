@@ -4,25 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario com Soma</title>
-    <style ></style>
-    
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
-    <h1>Formulario com Soma</h1>
+    <h1>Simulação de mensalidade</h1>
 
     <form  action="">
-        <select id="tipoEmpresa">
-            <option value="0">Qual seu tipo de empresa</option>
-            <option value="49">MEI (R$49,00)</option>
-            <option value="99">LTDA (R$99,00)</option>
+        <select id="tipoEmpresa" onchange="javascript:ativarModalidade(this);">
+            <option value="0">Modalidade da Empresa</option>
+            <option value="1">MEI</option>
+            <option value="2">Simples Nacional</option>
+            <option value="3">Lucro Presumido</option>
         </select>
+
+        <div id="faixamei">
+            <h3>Contabilidade para você que é <strong>MEI</strong></h3>
+            <select id="tipoSeg">
+                <option value="0">Qual é seu seguimento?</option>
+                <option value="60">Serviços</option>
+                <option value="100">Comercio</option>
+                <option value="150">Pequena Industria</option>
+                <option value="200">Serviço + Comercio</option>
+            </select> 
+        </div>
+
+        <div id="faixasimples">
+            <h3>Contabilidade para você que é do <strong>Simples Nacional</strong></h3>
+            <select id="tipoSegSimples">
+                <option value="0">Qual Seguimento</option>
+                <option value="100">Serviços</option>
+                <option value="190">Comercio</option>
+                <option value="250">Pequena Industria</option>
+                <option value="260">Serviço + Comercio</option>
+            </select> 
+
+            <select id="quantFunc">
+                <option value="0">Quantidade de Funcionários</option>
+                <option value="70">1</option>
+                <option value="140">2</option>
+                <option value="210">3</option>
+                <option value="280">4</option>
+                <option value="280">5 a 10</option>
+            </select>
+
+            <select id="faturM">
+                <option value="0">Faturamento Mensal</option>
+                <option value="100">Até 25.000</option>
+                <option value="150">25.000 a 50.000</option>
+                <option value="200">50.000 a 100.000</option>
+                <option value="300">100.000 a 150.000</option>
+                <option value="350">200.000 a 300.000</option>
+                <option value="400">mais de 300.000</option>
+            </select>
+        </div>
+
+        <div id="faixalpresumido">
+            <h3>Contabilidade para você que é do <strong>Lucro Presumido</strong></h3>
+            <select id="qntFlpres">
+                <option value="0">Quantidade de Funcionários</option>
+                <option value="0">0</option>
+                <option value="80">1</option>
+                <option value="160">2</option>
+                <option value="240">3</option>
+                <option value="300">4</option>
+            </select>
+
+            <select id="faMlpres">
+                <option value="0">Faturamento Mensal</option>
+                <option value="100">Até 25.000</option>
+                <option value="150">25.000 a 50.000</option>
+                <option value="200">50.000 a 100.000</option>
+                <option value="300">100.000 a 150.000</option>
+                <option value="350">200.000 a 300.000</option>
+                <option value="400">mais de 300.000</option>
+            </select>
+        </div>
         
-        <select id="quantFunc">
-            <option value="0">Quantidade de Funcionários</option>
-            <option value="49">1-3 (R$49,00)</option>
-            <option value="99">4-8 (R$99,00)</option>
-        </select>   
 
         <input id="btn" type="button" value="Calcular" onclick="FazerCalculo()">
         <div id="ResultadoSoma"></div>

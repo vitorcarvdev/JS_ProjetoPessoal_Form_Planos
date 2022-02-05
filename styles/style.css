@@ -2,3 +2,11 @@ form{width: 400px;}
 #ResultadoSoma{background: rgb(156, 103, 4); padding: 10px; color:#fff; text-align: center; border:2px solid #999;}
 select{width: 100%; padding: 16px 10px; margin: 0 0 5px 0; border:2px solid #999;}
 #btn{padding: 16px 10px; margin: 0 0 5px 0; width: 100%; border:2px solid #999;}
+
+.red{color:red !important; display:block !important;}
+.green{color: green !important;  display:block !important;}
+.blue{color:blue !important;  display:block !important;}
+.ocultar{display:none}
+
+
+#faixamei, #faixasimples, #faixalpresumido{display:none;}
